@@ -15,4 +15,13 @@ export const globalStyles = globalCss({
     fontFamily: 'Roboto',
     fontWeight: 400,
   },
+  '[data-radix-popper-content-wrapper]': {
+    zIndex: '9999 !important',
+  },
+  '.notification': {
+    width: '25rem !important',
+  },
+  '.Toastify__toast-theme--dark': {
+    background: '$gray800 !important',
+  },
 })

@@ -38,18 +38,35 @@ export const SuccessContainer = styled('main', {
 
 export const ImageContainer = styled('div', {
   width: '100%',
-  maxWidth: 130,
+  maxWidth: 145,
   height: 145,
   background: 'linear-gradient(180deg, #1ea483 0%, #7465d4 100%)',
-  borderRadius: 8,
+  borderRadius: '50%',
   padding: '0.25rem',
   marginTop: '4rem',
 
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
+  boxShadow: '0 0 60px rgba(0, 0, 0, 0.6)',
 
   img: {
     objectFit: 'cover',
+    width: '100%',
+    height: '100%',
+  },
+})
+
+export const ImageGroup = styled('div', {
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  width: '100%',
+  marginBottom: '3rem',
+
+  '> div': {
+    '&:not(:last-child)': {
+      marginRight: '-2rem',
+    },
   },
 })

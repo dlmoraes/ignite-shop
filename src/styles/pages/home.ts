@@ -8,55 +8,40 @@ export const HomeContainer = styled('main', {
   minHeight: 656,
 })
 
-export const Product = styled('div', {
-  background: 'linear-gradient(180deg, #1ea483 0%, #7465d4 100%)',
-  borderRadius: 8,
-  cursor: 'pointer',
-  position: 'relative',
+export const LeftArrowContainer = styled('div', {
+  position: 'absolute',
+  left: 0,
+  background:
+    'linear-gradient(90deg, rgba(18, 18, 20, 0.00) 0%, rgba(18, 18, 20, 0.75) 100%)',
+  width: '8.5rem',
+  height: '100%',
 
   display: 'flex',
-  alignItems: 'center',
+  flexDirection: 'column',
   justifyContent: 'center',
+})
 
-  img: {
-    objectFit: 'cover',
-  },
+export const RightArrowContainer = styled('div', {
+  position: 'absolute',
+  right: 0,
+  background:
+    'linear-gradient(90deg, rgba(18, 18, 20, 0.00) 0%, rgba(18, 18, 20, 0.75) 100%)',
+  width: '8.5rem',
+  height: '100%',
 
-  footer: {
-    position: 'absolute',
-    bottom: '0.25rem',
-    left: '0.25rem',
-    right: '0.25rem',
-    padding: '2rem',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+})
 
-    borderRadius: 6,
+export const ArrowButton = styled('button', {
+  background: 'none',
+  border: 0,
+  color: '$gray100',
+  cursor: 'pointer',
 
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-between',
-
-    backgroundColor: 'rgba(0 , 0, 0, 0.6)',
-
-    transform: 'translateY(110%)',
-    opacity: 0,
-    transition: 'all 0.2s ease-in-out',
-
-    strong: {
-      fontSize: '$lg',
-      color: '$gray100',
-    },
-
-    span: {
-      fontSize: '$xl',
-      fontWeight: 'bold',
-      color: '$green300',
-    },
-  },
-
-  '&:hover': {
-    footer: {
-      transform: 'translateY(0%)',
-      opacity: 1,
-    },
+  '&:disabled': {
+    opacity: 0.6,
+    cursor: 'not-allowed',
   },
 })

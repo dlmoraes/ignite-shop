@@ -1,19 +1,24 @@
 import { globalStyles } from '@/styles/global'
 import type { AppProps } from 'next/app'
 
-import logoImg from '@/assets/logo.svg'
-import { Container, Header } from '@/styles/pages/app'
-import Image from 'next/image'
+import { Header } from '@/components/Header'
+import { ShopContextProvider } from '@/context/ShopContext'
+import { Container } from '@/styles/pages/app'
+import { ToastContainer } from 'react-toastify'
+
+import 'react-toastify/dist/ReactToastify.css'
 
 globalStyles()
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <Container>
-      <Header>
-        <Image src={logoImg} alt="Teste" />
-      </Header>
-      <Component {...pageProps} />
-    </Container>
+    <ShopContextProvider>
+      <Container>
+        <Header />
+        <Component {...pageProps} />
+        <div id="sidebar"></div>
+        <ToastContainer className="notification" theme="dark" />
+      </Container>
+    </ShopContextProvider>
   )
 }
